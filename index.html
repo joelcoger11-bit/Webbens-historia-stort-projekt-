@@ -1,4 +1,140 @@
-<!DOCTYPE html> 
-<html>
-    hytgy
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+    <style>
+
+        
+
+        body {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 22px;
+            font-weight: 200;
+            font-style: normal;
+            background-color: rgb(11, 11, 103);
+            color: rgb(218, 218, 223);
+            margin: 0;
+           padding: 20px;
+
+          
+        }
+ 
+        .header-wrapper {
+ 
+  position: relative; 
+  text-align: center;
+  height: 120px;
+  margin-left: -20px;
+  margin-right: -20px; 
+  margin-top: -20px; 
+ 
+  
+  justify-content: center;
+}
+
+      .header-wrapper img {
+         position: absolute; 
+         top: 0; 
+         left: 0; 
+         width: 98.6%;
+         height: 261%;
+         object-fit: cover;
+         opacity: 0.6;
+         z-index: 0;
+          border: 8px solid rgb(1, 1, 19); }
+
+
+        .rubrik-box {
+            position: relative;
+            border: 4px solid rgb(23, 22, 22);
+            padding: 30px;
+            margin: 15px auto;
+            max-width: 500px;
+            text-align: center;
+            font-size: 48px;
+            border-radius: 70px;
+            background-color: #4e4b4a;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: rgb(11, 11, 103);
+            padding: 20px;
+            height: 100vh;
+            box-shadow: 2px 0 10px rgba(39, 39, 42, 0.5);
+            border: 2px solid black;
+        }
+
+        .sidebar button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 18px;
+            background-color: #4e4b4a;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .sidebar button:hover {
+            background-color: #6e6b6a;
+        }
+
+        .content {
+            flex-grow: 1;
+            padding: 18px;
+        }
+
+        section {
+            margin: 480px 0;
+        }
+
+        h2 {
+            font-size: 25px;
+            margin-bottom: 17px;
+        }
+    </style>
+</head>
+
+
+
+<body>
+     <div class="header-wrapper">
+     <img src="images/Internethistoria.jpg" alt="Bakgrundsbild"> </div>
+     <div class="rubrik-box"> Internets Historia 1989 till 1992 </div>
+<div class = "main-content"></div>
+     <div class="sidebar">
+        <button onclick="document.getElementById('webblasare').scrollIntoView({behavior: 'smooth'})"> De Dominanta Webbläsarna</button>
+        <button onclick="document.getElementById('foretag').scrollIntoView({behavior: 'smooth'})"> De Dominanta Företagen </button>
+        <button onclick="document.getElementById('samhalle').scrollIntoView({behavior: 'smooth'})">Påverkning på Samhället</button>
+        <button onclick="document.getElementById('Nya teknologier').scrollIntoView({behavior: 'smooth'})"> Nya teknologier </button>
+    </div>
+
+        <section id="webblasare">
+            <h2>De Dominanta Webbläsarna</h2>
+            <p>Exempeltextgdrgdrggdrgdrgdegd om webbläsare som Chrome, Firefox, Safari och Edge...</p>
+        </section>
+
+        <section id="foretag">
+            <h2>De Dominanta Företagen </h2>
+            <p>Exempeltext rgrgrdgdrgdgdrgdgrdgom Google, Amazon, Facebook, Apple och Microsoft...</p>
+        </section>
+
+        <section id="samhalle">
+            <h2>Påverkning på Samhället</h2>
+            <p>Exempeltext rgsgdrgdrgdrgom digitalisering, sociala medier, informationsspridning och arbetsmarknad...</p>
+        </section>
+
+        <section id="Nya teknologier">
+            <h2>Vilka stora nya teknologier utvecklades</h2>
+            <p>Exempeltextefeffsfsdffsefesf om AI, molntjänster, blockchain, 5G och IoT...</p>
+        </section>
+    </div>
+
+
+</body>
 </html>
