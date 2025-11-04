@@ -16,8 +16,6 @@
             color: rgb(218, 218, 223);
             margin: 0;
            padding: 20px;
-
-          
         }
  
         .header-wrapper {
@@ -79,9 +77,35 @@
             border-radius: 10px;
             cursor: pointer;
         }
+.referens-knapp {
+  position: absolute;
+}
+
+.referens-popup {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 105%; 
+  background-color: #4e4b4a;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.2);
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.referens-popup a {
+  color: rgb(151, 154, 194);
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.referens-popup a:hover {
+  text-decoration: underline;
+}
 
         .sidebar button:hover {
-            background-color: #6e6b6a;
+            background-color: #454343;
         }
 
         .content {
@@ -104,16 +128,28 @@
 
 <body>
      <div class="header-wrapper">
-     <img src="images/Internethistoria.jpg" alt="Bakgrundsbild"> </div>
+     <img src="Images/Internethistoria.jpg" alt="Bakgrundsbild"> </div>
      <div class="rubrik-box"> Internets Historia 1989 till 1992 </div>
-<div class = "main-content"></div>
+             <h2>{text-align: left;
+               } </h2>
+            <p>Ewandandnwdad wnadnwajd vwadsansad</p>
+
      <div class="sidebar">
         <button onclick="document.getElementById('webblasare').scrollIntoView({behavior: 'smooth'})"> De Dominanta Webbläsarna</button>
         <button onclick="document.getElementById('foretag').scrollIntoView({behavior: 'smooth'})"> De Dominanta Företagen </button>
         <button onclick="document.getElementById('samhalle').scrollIntoView({behavior: 'smooth'})">Påverkning på Samhället</button>
         <button onclick="document.getElementById('Nya teknologier').scrollIntoView({behavior: 'smooth'})"> Nya teknologier </button>
-    </div>
 
+
+<div class="referens-knapp" style="margin-top: 40px;">
+  <label for="toggle-referens" class="referens-button">Referenser</label>
+  <input type="checkbox" id="toggle-referens" hidden>
+  <div class="referens-popup">
+    <a href="https://www.wikipedia.org/" target="_blank">Wikipedia</a><br>
+    <a href="https://www.w3schools.com/" target="_blank">W3Schools</a><br>
+    <a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a>
+  </div>
+</div>
         <section id="webblasare">
             <h2>De Dominanta Webbläsarna</h2>
             <p>Exempeltextgdrgdrggdrgdrgdegd om webbläsare som Chrome, Firefox, Safari och Edge...</p>
