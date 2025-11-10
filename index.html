@@ -55,7 +55,28 @@
             background-color: #4e4b4a;
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
         }
+.main-wrapper {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+.text-content {
+  flex-grow: 1;
+   margin-left: 20px;
+  text-align: right;
+  font-size: 14px;
+  color: #e0e0e0;
+}
 
+.text-content h2 {
+  font-size: 19px;
+  
+}
+
+.text-content p {
+  font-size: 9px;
+  line-height: 1.3;
+}
         .sidebar {
             width: 250px;
             background-color: rgb(11, 11, 103);
@@ -63,6 +84,7 @@
             height: 100vh;
             box-shadow: 2px 0 10px rgba(39, 39, 42, 0.5);
             border: 2px solid black;
+             flex-shrink: 0;
         }
 
         .sidebar button {
@@ -71,33 +93,43 @@
             margin: 10px 0;
             padding: 10px;
             font-size: 18px;
-            background-color: #4e4b4a;
+            background-color: #64615f;
             color: white;
             border: none;
             border-radius: 10px;
             cursor: pointer;
         }
-.referens-knapp {
-  position: absolute;
+.referens-button {
+  display: block;
+  width: 80%;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #777da4;
+  color: rgb(237, 225, 225);
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+.referens-button:hover {
+  background-color: #2d3052; 
 }
 
 .referens-popup {
   display: none;
-  position: absolute;
-  top: 0;
-  left: 105%; 
-  background-color: #4e4b4a;
-  padding: 10px;
+  background-color: rgb(236, 227, 227);
+  color: black;
+  padding: 25px;
+  margin-top: 10px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(255,255,255,0.2);
-  white-space: nowrap;
-  z-index: 10;
+  box-shadow: 0 0 10px rgba(255,255,255,0.3);
+  font-size: 17px;
 }
-
-.referens-popup a {
-  color: rgb(151, 154, 194);
-  text-decoration: none;
-  font-size: 18px;
+.referens-popup a:visited {
+  color: rgb(80, 84, 146); 
+}
+#toggle-referens:checked + .referens-popup {
+  display: block;
 }
 
 .referens-popup a:hover {
@@ -121,56 +153,177 @@
             font-size: 25px;
             margin-bottom: 17px;
         }
+
+        ul {
+  list-style-type: circle; 
+  padding-left: 20px;
+  font-size: 19px;
+  line-height: 2.3;
+  color:rgb(8, 3, 3);
+}
+
+li {
+  margin-bottom: 8px;
+}
+.scroll-top-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 28px;         
+  background-color: #4d2bb1;
+  color: rgb(8, 8, 11);
+  border: none;
+  border-radius: 50%;      
+  width: 60px;             
+  height: 60px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(255,255,255,0.3);
+  cursor: pointer;
+  z-index: 1000;
+}
+.scroll-top-button:hover {
+  background-color: #64615f;
+}
+.rotate-up {
+  display: inline-block;
+  transform: rotate(90deg); 
+}
+.image-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap; 
+  justify-content: space-between;
+}
+
+.image-box {
+  flex: 1 1 36%; 
+  text-align: left;
+
+}
+
+.text-image {
+  height: 300px;
+  width: 78%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
+
+.image-box figcaption {
+  margin-top: 7px;
+  font-size: 14px;
+  color: #e0e0e0;
+}
     </style>
 </head>
 
 
 
 <body>
+    <div id="top"></div>
      <div class="header-wrapper">
      <img src="Images/Internethistoria.jpg" alt="Bakgrundsbild"> </div>
      <div class="rubrik-box"> Internets Historia 1989 till 1992 </div>
-             <h2>{text-align: left;
-               } </h2>
-            <p>Ewandandnwdad wnadnwajd vwadsansad</p>
-
+     
+     <div class="main-wrapper">
      <div class="sidebar">
         <button onclick="document.getElementById('webblasare').scrollIntoView({behavior: 'smooth'})"> De Dominanta Webbläsarna</button>
         <button onclick="document.getElementById('foretag').scrollIntoView({behavior: 'smooth'})"> De Dominanta Företagen </button>
         <button onclick="document.getElementById('samhalle').scrollIntoView({behavior: 'smooth'})">Påverkning på Samhället</button>
         <button onclick="document.getElementById('Nya teknologier').scrollIntoView({behavior: 'smooth'})"> Nya teknologier </button>
-
-
-<div class="referens-knapp" style="margin-top: 40px;">
-  <label for="toggle-referens" class="referens-button">Referenser</label>
+<label for="toggle-referens" class="referens-button">Referenser</label>
   <input type="checkbox" id="toggle-referens" hidden>
   <div class="referens-popup">
-    <a href="https://www.wikipedia.org/" target="_blank">Wikipedia</a><br>
-    <a href="https://www.w3schools.com/" target="_blank">W3Schools</a><br>
-    <a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a>
+    <a href="https://en.wikipedia.org/wiki/History_of_the_Internet#1990%E2%80%932003:_Rise_of_the_global_Internet,_Web_1.0" 
+    target="_blank">History of the internet</a><br>
+    <a href="https://sv.wikipedia.org/wiki/Internets_historia"
+     target="_blank">Internets historia</a><br>
+     <a href="https://copilot.microsoft.com/" target="_blank"> Microsoft_Copilot (LLM) </a><br>
+     <a href="https://sv.wikipedia.org/wiki/Server" target="_blank"> Wikipedia_Server </a><br>
+     <a href="https://sv.wikipedia.org/wiki/Modem" target="_blank"> Wikipedia_Modem </a><br>
   </div>
 </div>
+<div class="content">   
+    <h2>Utveckling av Internetet </h2>
+    <p>
+      År 1989 utvecklade Tim Berners-Lee World Wide Web vid CERN i Schweiz, ett system som
+       länkade dokument via hypertext och gjorde dem tillgängliga över hela nätverket. Detta blev startpunkten för en global informationsrevolution. 
+       I början av 1990-talet började webben spridas, först inom forskningsvärlden, men snart även till allmänheten.
+        Den första webbläsaren, (WWW) WorldWideWeb, lanserades 1991 och lade grunden för hur vi idag surfar på nätet.
+        Samtidigt ökade internets kapacitet snabbt tack vare fiberoptik och ny teknik som WDM,
+         vilket möjliggjorde snabbare och mer effektiv datakommunikation.</p>
+         
+         
+         
+         <p>Detta öppnade möjligheter som e-post, snabbmeddelanden, videosamtal och webbplatser med forum, bloggar och nätbutiker. 
+         Internet gick från att vara ett verktyg för forskare till att bli en central del av människors vardag.
+    </p>
+
+    <p> Fram till slutet av 1990-talet var det vanligaste sättet för hemanvändare att koppla upp sig mot internet modem, 
+        som via telefonnätet ringde till en server. Telefonlinjens kapacitet är begränsad till 64 kilobit per sekund,
+         varav modemen kan använda högst 56,6 kbit/s. </p>
+
+         <div class="image-row">
+  <figure class="image-box">
+    <img src="Images/Modems.jpg" alt="Modem" class="text-image">
+    <figcaption> (modulator-demodulator), är en hårdvaruprodukt vilken används för att ansluta digital utrustning till en analog förbindelse,
+         till exempel radio, telefonnätet eller kabel-TV-nätet.</figcaption>
+  </figure>
+            <figure class="image-box">
+    <img src="Images/My_Opera_Server_Back.jpg" alt="Opera Server" class="text-image">
+    <figcaption>ett datorsystem som betjänar andra system, klienter, ofta över ett datornätverk.</figcaption>
+  </figure>
+</div>
+  </div>
+</div> 
+
+
+
         <section id="webblasare">
-            <h2>De Dominanta Webbläsarna</h2>
-            <p>Exempeltextgdrgdrggdrgdrgdegd om webbläsare som Chrome, Firefox, Safari och Edge...</p>
+            <h2>De dominanta webbläsarna</h2>
+            <p>WorldWideWeb är den första webbläsaren, skapad 1990. ViolaWWW  en tidig grafisk webbläsare utvecklad 1992. 
+               Mosaic lanseras först 1993, men utvecklingen påbörjades 1992 vid NCSA. Den blev snabbt populär eftersom Mosaic gjorde det möjligt för Netscape att bli framgångsrikt,
+                eftersom Mosaic visade hur kraftfull och användarvänlig en webbläsare kunde vara.</p>
         </section>
 
         <section id="foretag">
-            <h2>De Dominanta Företagen </h2>
-            <p>Exempeltext rgrgrdgdrgdgdrgdgrdgom Google, Amazon, Facebook, Apple och Microsoft...</p>
+            <h2>De dominanta företagen </h2>
+            <p>fanns ännu inga dominerande kommersiella internetföretag, men några viktiga aktörer var:
+         CERN (där (WWW) WorldWideWeb utvecklades.)
+         NSFNET, National Science Foundation i USA drev ryggraden i det akademiska nätverket.
+         CompuServe, AOL, Prodigy började erbjuda tjänster till konsumenter, men var ännu inte fullt förenat med WWW(WorldWideWeb).</p>
         </section>
 
         <section id="samhalle">
-            <h2>Påverkning på Samhället</h2>
-            <p>Exempeltext rgsgdrgdrgdrgom digitalisering, sociala medier, informationsspridning och arbetsmarknad...</p>
+            <h2>Påverkan på samhället</h2>
+            <p>Universitet och forskningsinstitutioner fick tillgång till global kommunikation och informationsdelning. 
+                WWW gjorde det möjligt att publicera och läsa information utan central kontroll. alltså Individer kunde skapa egna webbsidor och bloggar.
+                Information kunde spridas globalt utan att passera en "grindvakt".
+                Censur blev svårare, särskilt i öppna samhällen.
+                Grunden lades för framtida e-handel, sociala medier och digital kultur.
+            </p>
         </section>
 
         <section id="Nya teknologier">
             <h2>Vilka stora nya teknologier utvecklades</h2>
-            <p>Exempeltextefeffsfsdffsefesf om AI, molntjänster, blockchain, 5G och IoT...</p>
+            <p>
+                <ul>
+             <li>HTML: Märkspråk för att strukturera webbsidor. </li> 
+             <li>HTTP: Protokoll för att överföra webbsidor.</li>
+             <li>URL: Standardiserad adress för resurser på webben. </li>
+             <li>Webbläsare: Program för att navigera och visa webbsidor.</li>
+             <li>DNS: Domännamnssystemet som ersatte IP-listor.</li>
+             <li>ISPs: Kommersiella internetleverantörer började etableras.</li>
+            </ul>
+
+            </p>
         </section>
     </div>
 
-
+   <a href="#top" class="scroll-top-button"><span class="rotate-up">&lt;</span></a>
 </body>
 </html>
+
