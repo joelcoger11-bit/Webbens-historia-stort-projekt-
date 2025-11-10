@@ -39,7 +39,6 @@
          height: 261%;
          object-fit: cover;
          opacity: 0.6;
-         z-index: 0;
           border: 8px solid rgb(1, 1, 19); }
 
 
@@ -70,7 +69,7 @@
 
 .text-content h2 {
   font-size: 19px;
-  
+
 }
 
 .text-content p {
@@ -112,7 +111,7 @@
   text-align: center;
 }
 .referens-button:hover {
-  background-color: #2d3052; 
+  background-color: #2d3052;
 }
 
 .referens-popup {
@@ -159,7 +158,7 @@
   padding-left: 20px;
   font-size: 19px;
   line-height: 2.3;
-  color: white;
+  color:white;
 }
 
 li {
@@ -245,6 +244,7 @@ li {
      <a href="https://sv.wikipedia.org/wiki/Server" target="_blank"> Wikipedia_Server </a><br>
      <a href="https://sv.wikipedia.org/wiki/Modem" target="_blank"> Wikipedia_Modem </a><br>
   </div>
+  <button onclick="document.getElementById('HTML & HTTP').scrollIntoView({behavior: 'smooth'})">HTML & HTTP</button>
 </div>
 <div class="content">   
     <h2>Utveckling av Internetet </h2>
@@ -321,9 +321,23 @@ li {
 
             </p>
         </section>
+        <section id="HTML & HTTP">
+  <h2>Vad är HTML & HTTP? </h2>
+  <p>HTML och HTTP är två grundläggande teknologier som tillsammans möjliggjorde skapandet av World Wide Web i början av 1990-talet. 
+    HTML, eller HyperText Markup Language, är ett märkspråk som används för att strukturera och presentera innehåll på webbsidor. 
+    Det gör det möjligt att skapa rubriker, stycken, listor, länkar, bilder och andra element som formar hur en webbsida ser ut och fungerar. HTML är inte ett programmeringsspråk, 
+    utan ett sätt att beskriva innehållets struktur så att webbläsare kan tolka och visa det korrekt.</p>
+      
+    <p>HTTP, eller HyperText Transfer Protocol, är det kommunikationsprotokoll som används för att överföra HTML-dokument och annan information mellan webbservrar och klienter, 
+      såsom webbläsare. När en användare klickar på en länk eller skriver in en webbadress, skickar webbläsaren en HTTP-förfrågan till servern, som svarar med det begärda innehållet. 
+      HTTP är ett textbaserat protokoll som från början var mycket enkelt, med grundläggande metoder som GET och HEAD, men har sedan dess utvecklats till att stödja mer avancerade funktioner och säkerhet.</p>
+      
+      <p>Tillsammans utgör HTML och HTTP grunden för hur webben fungerar: HTML beskriver vad som ska visas, och HTTP ser till att det levereras. 
+      Deras introduktion i början av 1990-talet markerade en revolution i hur människor kommunicerar, söker information och bygger digitala tjänster. 
+     </p>
+</section>
     </div>
 
    <a href="#top" class="scroll-top-button"><span class="rotate-up">&lt;</span></a>
 </body>
 </html>
-
