@@ -112,11 +112,11 @@ body {
   display: none;
   background-color: rgb(236, 227, 227);
   color: black;
-  padding: 25px;
-  margin-top: 10px;
+  padding: 20px;
+  margin-top: 7px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-  font-size: 17px;
+  font-size: 16px;
 }
 
 .referens-popup a:visited {
